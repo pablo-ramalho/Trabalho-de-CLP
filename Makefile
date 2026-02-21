@@ -10,10 +10,10 @@ gerar_windows: interface.py
 	pyinstaller --onefile --noconsole --name "fourier.exe" --distpath . interface.py
 
 executar_windows: fourier.exe
-	.\dist\fourier.exe $(N) $(A)
+	.\fourier.exe $(N) $(A)
 
 gerar_linux: interface.py
 	pyinstaller --onefile --noconsole --name "fourier.out" --distpath . interface.py
 
 executar_linux: fourier
-	./dist/fourier $(N) $(A)
+	./fourier $(N) $(A)
