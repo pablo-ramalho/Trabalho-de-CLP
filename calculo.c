@@ -44,7 +44,7 @@ double squareWave(int N, int A, double t){
  */
 double sawtoothWave(int N, int A, double t){
     int k;                                          // k => corresponde ao indice (termo/harmônica) da série
-    double resultado = 0.0;                         // resultado => este valor, ao final das somas, será multiplicado por um fator (4 * A) / PI
+    double resultado = 0.0;                         // resultado => este valor, ao final das somas, será multiplicado por um fator (2 * A) / PI
 
     for(k = 1; k <= N; ++k){
         // pow(-1, k+1) alterna o sinal (+, -, +, -...)
@@ -66,7 +66,7 @@ double sawtoothWave(int N, int A, double t){
  */
 double triangleWave(int N, int A, double t){
     int k;                                          // k => corresponde ao indice (termo/harmônica) da série
-    double resultado = 0.0;                         // resultado => este valor, ao final das somas, será multiplicado por um fator (4 * A) / PI
+    double resultado = 0.0;                         // resultado => este valor, ao final das somas, será multiplicado por um fator (8 * A) / (pow(PI, 2))
     double n;                                       // n => variável auxiliar que contém o valor calculado de 2 * k - 1
 
     for(k = 1; k <= N; ++k){
