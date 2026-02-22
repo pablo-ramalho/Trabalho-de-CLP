@@ -5,6 +5,7 @@ instalar_dependencias:
 	pip install matplotlib
 	pip install numpy
 	pip install pyinstaller
+	pip install PyQt5
 
 compilar_lib:
 	gcc -shared -fPIC -lm -o libcalculo.so calculo.c
