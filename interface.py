@@ -121,6 +121,7 @@ def main() -> None:
 		spine.set_color("#ffffff")
 
 	ax.grid(color="#1a1a1a", linestyle="--", linewidth=0.6, alpha=0.8)  # type: ignore[reportUnknownMemberType]
+	ax.set_yticks([-amplitude, 0.0, amplitude])
 	fig.subplots_adjust(left=0.04, right=0.99, top=0.92, bottom=0.08)
 
 	# Salva ou exibe
