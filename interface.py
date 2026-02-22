@@ -22,7 +22,7 @@ def load_fourier_library():
 		return lib
 	except OSError as e:
 		print(f"Erro ao carregar biblioteca C: {e}")
-		print("Certifique-se de compilar com: make compilar_lib")
+		print("Certifique-se de compilar com: make libcalculo.so (Linux) ou make libcalculo.dll (Windows)")
 		sys.exit(1)
 
 # Carrega a biblioteca C
