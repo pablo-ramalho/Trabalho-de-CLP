@@ -25,15 +25,37 @@ E retorna `f(t)`: a amplitude da onda no instante t
 
 ## Como usar
 
-### 1. Compilar a biblioteca C
+### 1. Compilar a biblioteca C em uma biblioteca compartilhada
+
+Para gerar a biblioteca compartilhada para linux
 
 ```bash
-make compilar_lib
+make libcalculo.so
 ```
 
-Gera `libcalculo.so` (Linux/macOS) ou `libcalculo.dll` (Windows)
+Para gerar a biblioteca compartilhada para windows
 
-### 2. Criar virtual environment (recomendado)
+```bash
+make libcalculo.dll
+```
+
+### 2. Gerar o executável
+
+Geração do executável para linux
+
+```bash
+make fourier.out
+```
+
+Geração do executável para windows
+
+```bash
+make fourier.exe
+```
+
+### OU
+
+### 2.1. Criar virtual environment para gerar o executável => OPCIONAL
 
 ```bash
 python3 -m venv venv  # No Windows: python -m venv venv
@@ -41,25 +63,46 @@ source venv/bin/activate  # No Windows: venv\Scripts\activate
 pip install matplotlib numpy PyQt5
 ```
 
-### 3. Executar o programa
+### 3. Executar o programa (casos de estudo)
+
+É necessário rodar `make run_linux` (Plataforma linux) ou `make run_windows` (Plataforma windows)
+
+É possível passar parâmetros para o makefile para testar o programa com diferentes valores de entrada. São eles:
+`N` => o número de termos/harmônicas da série
+`A` => a amplitude da onda
+`WAVE` => o tipo de onda que será gerada
+
+Exemplos de comandos com make para execução de caso de estudo:
+
+```bash
+make run_linux N=5 A=3 WAVE='sawtooth'
+```
+
+```bash
+make run_windows N=20 A=1 WAVE='square'
+```
+
+### OU
+
+### 3.1. Executar o programa dentro do virtual environment (venv) => OPCIONAL
 
 **Opção A: Com janela interativa (requer display gráfico)**
 ```bash
-./run.sh 20 1.0 square
-./run.sh 15 1.5 sawtooth
-./run.sh 10 0.8 triangle
+./run.sh 20 1 square
+./run.sh 15 2 sawtooth
+./run.sh 10 1 triangle
 ```
 
 **Opção B: Salvar em arquivo PNG**
 ```bash
-./run.sh 20 1.0 square --save grafico.png
-./run.sh 15 1.5 sawtooth --save onda.png
-./run.sh 10 0.8 triangle --save triangulo.png
+./run.sh 20 1 square --save quadrada.png
+./run.sh 15 2 sawtooth --save denteDeSerra.png
+./run.sh 10 1 triangle --save triangular.png
 ```
 
 **Parâmetros:**
 - `N`: Número de harmônicas (padrão: 10)
-- `A`: Amplitude (padrão: 1.0)
+- `A`: Amplitude (padrão: 1)
 - `wave_type`: Tipo de onda - `square`, `sawtooth` ou `triangle` (padrão: square)
 - `--save arquivo.png`: Salva gráfico em arquivo (opcional)
 
