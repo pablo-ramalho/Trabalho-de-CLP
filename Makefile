@@ -24,3 +24,12 @@ gerar_linux: interface.py
 
 executar_linux: compilar_lib
 	python interface.py $(N) $(A)
+
+limpar_windows:
+	-cmd /c del /Q libcalculo.dll fourier.exe *.spec
+	-cmd /c rmdir /S /Q build __pycache__ 
+	@echo "Limpeza do Windows Concluida"
+
+limpar_linux:
+	rm -rf libcalculo.so fourier.out build/ __pycache__/ *.spec
+	@echo "Limpeza do Linux concluida"
