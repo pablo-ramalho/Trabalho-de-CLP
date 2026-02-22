@@ -67,10 +67,10 @@ pip install matplotlib numpy PyQt5
 
 É necessário rodar `make run_linux` (Plataforma linux) ou `make run_windows` (Plataforma windows)
 
-É possível passar parâmetros para o makefile para testar o programa com diferentes valores de entrada. São eles:
-`N` => o número de termos/harmônicas da série
-`A` => a amplitude da onda
-`WAVE` => o tipo de onda que será gerada
+É possível passar parâmetros para o makefile para testar o programa com diferentes valores de entrada. São eles:<br>
+`N` => o número de termos/harmônicas da série<br>
+`A` => a amplitude da onda<br>
+`WAVE` => o tipo de onda que será gerada<br>
 
 Exemplos de comandos com make para execução de caso de estudo:
 
