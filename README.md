@@ -203,3 +203,7 @@ A integração C-Python permite:
 - Funções trigonométricas via `math.h`
 - Compilação com `-shared -fPIC -lm` para biblioteca dinâmica
 - ctypes para interface sem dependências externas
+
+## Pacotes extras necessários
+
+- É necessário a instalação de 4 pacotes Python: `matplotlib`, `numpy`, `pyinstaller` e `PyQt5`. Para instalá-los digitar na linha de comando do terminal: `make instalar_dependencias`
