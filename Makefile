@@ -11,7 +11,7 @@ compilar_lib:
 	gcc -shared -fPIC -lm -o libcalculo.so calculo.c
 
 instalar_windows:
-	gcc -shared -fPIC -lm -o libcalculo.dll calculo.c
+	gcc -shared -lm -o libcalculo.dll calculo.c
 
 gerar_windows: instalar_windows interface.py
 	pyinstaller --onefile --noconsole --name "fourier.exe" --distpath . interface.py
