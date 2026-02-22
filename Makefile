@@ -13,13 +13,13 @@ compilar_lib:
 instalar_windows:
 	gcc -shared -lm -o libcalculo.dll calculo.c
 
-gerar_windows: instalar_windows interface.py
+gerar_windows: interface.py
 	pyinstaller --onefile --noconsole --name "fourier.exe" --distpath . interface.py
 
 executar_windows: fourier.exe
 	.\fourier.exe $(N) $(A)
 
-gerar_linux: compilar_lib interface.py
+gerar_linux: interface.py
 	pyinstaller --onefile --noconsole --name "fourier.out" --distpath . interface.py
 
 executar_linux: compilar_lib
