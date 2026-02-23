@@ -25,6 +25,10 @@ E retorna `f(t)`: a amplitude da onda no instante t
 
 ## Como usar
 
+## Pacotes extras necessários
+
+- É necessário a instalação de 4 pacotes Python: `matplotlib`, `numpy`, `pyinstaller` e `PyQt5`. Para instalá-los digitar na linha de comando do terminal: `make instalar_dependencias`
+
 ### 1. Compilar a biblioteca C em uma biblioteca compartilhada
 
 Para gerar a biblioteca compartilhada para linux
@@ -246,7 +250,3 @@ A integração C-Python permite:
 - Funções trigonométricas via `math.h`
 - Compilação com `-shared -fPIC -lm` para biblioteca dinâmica
 - ctypes para interface sem dependências externas
-
-## Pacotes extras necessários
-
-- É necessário a instalação de 4 pacotes Python: `matplotlib`, `numpy`, `pyinstaller` e `PyQt5`. Para instalá-los digitar na linha de comando do terminal: `make instalar_dependencias`
