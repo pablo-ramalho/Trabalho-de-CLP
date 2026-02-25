@@ -1,6 +1,6 @@
 # Série de Fourier - Integração Python-C
 
-Projeto que implementa o cálculo de Séries de Fourier para aproximação de ondas (quadrada, dente de serra, triangular) com integração entre Python e C.
+Projeto que implementa o cálculo de Séries de Fourier para aproximação de ondas (quadrada, dente de serra e triangular) com integração entre Python e C.
 
 ## Arquitetura
 

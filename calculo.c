@@ -81,4 +81,3 @@ double triangleWave(int N, int A, double t){
     // Aplica o ganho final da onda triangular: (8A / PI^2)
     return (8 * A) / (pow(PI, 2)) * resultado;
 }
-
